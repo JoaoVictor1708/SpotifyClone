@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", serif;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    height: 100%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/*Sidebar completa*/
+
+nav{
+    height: 90vh;
+    width: 300px;
+    background-color: rgb(27, 27, 27);
+    padding: 10px;
+    color: rgb(214, 214, 214);
+    border-radius: 16px;
+}
+
+nav main{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav main p{
+    cursor: pointer;
+}
+
+nav #library{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
+}
+
+nav #library #plus-icon{
+    margin-left: 100px;
+}
+
+i{
+    margin-right: 5px;
+}
+
+nav div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48, 48, 48);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 10px 0;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav div button{
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+nav div button:hover{
+    border: 2px solid black;
+}
+
+#cookies{
+    margin-top: 30px;
+    font-size: 18px;
+    color: rgb(73, 73, 73);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#language-button{
+    margin-top: 60px;
+    background-color: transparent;
+    padding: 8px 5px;
+    border-radius: 16px;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#language-button:hover{
+    border: 2px solid rgb(184, 184, 184);
+}
+
+#logo-spotify{
+    margin-top: 10px;
+    width: 135px;
+}
+
+/*Header*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: calc(100vw - 400px);
+    background-color: rgb(27, 27, 27);
+    padding: 10px;
+    border-radius: 16px;
+}
+
+#arrows img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#arrows img:hover{
+    background-color: rgb(48, 48, 48);
+    border:black
+}
+
+header input{
+    background-color: rgb(48, 48, 48);
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 20px;
+    width: 400px;
+    height: 30px;
+    color: white;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+header button{
+    background-color: transparent;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+#entrar-button{
+    background-color: rgb(58, 189, 58);
+}
+
+/*Content*/
+#content{
+    background-color: rgb(27, 27, 27);
+    width: calc(100vw - 400px);
+    height: 70vh;
+    margin-top: 10px;
+    border-radius: 16px;
+    padding: 0 10px 100px;
+
+    display: flex;
+    flex-direction: column;
+    color: rgb(214, 214, 214);
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+#content h1, #content h2{
+    position: fixed;
+    background-color: rgb(27, 27, 27);
+    font-size: 40px;
+    width: calc(100vw - 430px);
+    border-radius: 16px;
+}
+
+#content h1{
+    align-items: center;
+    padding: 0 0 10px 10px;
+}
+
+#content h2{
+    margin-top: 50px;
+    font-size: 25px;
+    padding: 0 0 10px 10px;
+    border-bottom: 1px solid rgb(83, 83, 83);
+}
+
+/*Cards*/
+.cards{
+    background-color: transparent;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    border-radius: 16px;
+    border: 1px solid black;
+}
+
+.cards img{
+    width: 200px;
+    height: 300px;
+    transition: 0.8s;
+    transition-delay: 0.3s;
+}
+
+.cards img:hover{
+    rotate: -4deg;
+    scale: 1.1;
+    filter: saturate(1.3);
+}
+
+#gridcards{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 100px;
+}
+
+/*footer*/
+
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 25%, rgba(9,9,121,1) 100%);
+    width: 100vw;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+footer button{
+    margin-right: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
