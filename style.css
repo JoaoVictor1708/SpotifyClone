@@ -5,12 +5,16 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     background-color: rgb(0, 16, 17);;
     display: flex;
     flex-direction: row;
-    gap: 15px;
-    height: 100%;
+    gap: 10px;
     padding: 10px;
     overflow: hidden;
 }
@@ -20,7 +24,7 @@ body{
 nav{
     background-image:url(./assets/bgcards.jpg);
     background-position: center;
-    height: 90vh;
+    height: 100%;
     width: 300px;
     background-color: rgb(27, 27, 27);
     padding: 10px;
@@ -31,7 +35,7 @@ nav{
 nav main{
     font-size: 20px;
     font-weight: 500;
-    margin: 20px 0;
+    margin: 10px 0 5px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -42,6 +46,18 @@ nav main p{
     cursor: pointer;
     transition: 0.5s;
 }
+
+#sidebar-principal{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+ul li{
+    display: flex;
+}
+
 nav main p:hover{
     font-size: 21px;
 }
@@ -89,7 +105,7 @@ nav div button:hover{
 }
 
 #cookies{
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 18px;
     color: rgb(73, 73, 73);
     cursor: pointer;
@@ -97,7 +113,7 @@ nav div button:hover{
 }
 
 #language-button{
-    margin-top: 60px;
+    margin-top: 10px;
     background-color: transparent;
     padding: 8px 5px;
     border-radius: 16px;
@@ -116,6 +132,9 @@ nav div button:hover{
     width: 135px;
 }
 
+#logo-menu{
+    visibility: hidden;
+}
 /*Header*/
 
 header{
@@ -123,7 +142,7 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    width: calc(100vw - 400px);
+    width: 100%;
     background-color: rgb(27, 27, 27);
     padding: 10px;
     border-radius: 16px;
@@ -148,13 +167,21 @@ header{
 
 header input{
     background-color: rgb(0, 19, 20);
-    border: 1px solid rgb(0, 53, 56);;
+    border: 1px solid rgb(0, 53, 56);
     border-radius: 20px;
     width: 400px;
     height: 50px;
     color: white;
     padding: 10px;
     margin-left: 100px;
+}
+
+#headerbuttons button{
+    transition: 0.5s;
+}
+
+#headerbuttons button:hover{
+    background-color: rgb(0, 36, 37);
 }
 
 header button{
@@ -172,14 +199,28 @@ header button{
     background-color: rgb(0, 19, 20);;
 }
 
+#account-button{
+    visibility: hidden;
+    position: fixed;
+    transition: 0.5s;
+}
+
 /*Content*/
+
+#separador{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
 #content{
     background-color: rgb(27, 27, 27);
     background-image:url(./assets/bgcards.jpg);
     background-position: center;
-    width: calc(100vw - 400px);
-    height: 82vh;
-    margin-top: 10px;
+    width: 100%;
+    height: 90%;
     border-radius: 16px;
     padding: 0 10px 50px;
 
@@ -204,31 +245,55 @@ header button{
 
 /*Cards*/
 .cards{
+    display: flex;
     overflow: hidden;
-    width: 200px;
+    width: 300px;
     height: 300px;
     border-radius: 16px;
     border: 1px solid black;
+    position: relative;
+    transition: 0.5s;
 }
 
 .cards img{
-    width: 200px;
+    width: 300px;
     height: 300px;
     transition: 0.8s;
     transition-delay: 0.3s;
+    opacity: 0.9;
 }
 
-.cards img:hover{
+.cards:hover img{
     rotate: -4deg;
     scale: 1.1;
     filter: saturate(1.3);
+    opacity: 1;
+}
+
+.cards:hover p{
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+.cards p{
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    background-color: black;
+    width: 300px;
+    bottom:0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(50%);
 }
 
 #gridcards{
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 30px;
     overflow-y: scroll;
 }
 
@@ -240,8 +305,8 @@ footer{
     bottom: 0;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 25%, rgba(9,9,121,1) 100%);
-    width: 100vw;
-    height: 60px;
+    width: 100%;
+    height: 50px;
 
     display: flex;
     justify-content: space-between;
@@ -253,10 +318,54 @@ footer{
 
 footer button{
     margin-right: 20px;
-    padding: 15px;
+    padding: 10px 15px;
     border: none;
     border-radius: 16px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+}
+
+footer h1{
+    font-size: 25px;
+}
+
+footer p{
+    font-size: 15px;
+}
+
+/*bottombar*/
+
+#bottombar{
+    background-image: url(./assets/bgcards.jpg);
+    background-image: center;
+    visibility: hidden;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    border-radius: 16px;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    align-items: center;
+    padding: 3px;
+}
+
+#bottombar div{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#bottombar i{
+    background-color: rgb(0, 19, 20) ;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#bottombar i:hover{
+    background-color: rgb(0, 37, 39);
 }

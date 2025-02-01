@@ -1,0 +1,144 @@
+@media (max-width: 2400px) {
+    #gridcards{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 2000px) {
+    #gridcards{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1700px) {
+    #gridcards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1400px) {
+    #gridcards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header input{
+        margin-left: 10px;
+    }
+
+    header{
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    body{
+        gap: 0;
+    }
+
+    #gridcards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav , footer{
+        visibility: hidden;
+        position: fixed;
+    }
+
+    /*Header*/
+    header input{
+        margin-left: 10px;
+        width: 230px;
+    }
+
+    header #arrows img{
+        width: 30px;
+        height: 30px;
+    }
+
+    /*content*/
+    #content{
+        height: 75%;
+    }
+
+    /*bottombar*/
+    #bottombar{
+        position: relative;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 750px){ /*Cards*/
+
+    header button, #entrar-button{
+        visibility: hidden;
+        position: fixed;
+    }
+
+    #account-button{
+        visibility: visible;
+        position: inherit;
+    }
+
+    /*Mudança de card*/
+
+    .cards{
+        max-width: 300px;
+        width: 100%;
+        height: 100px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(0, 19, 20);
+        align-items: center;
+    }
+    
+    .cards img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .cards p{
+        transform:translateY(50%);
+        transition: 0.5s;
+        height: 100%;
+        background-color: rgb(0, 19, 20);
+    }
+
+    .cards:hover p{
+        opacity: 100%;
+        background-color: rgb(0, 36, 37);
+    }
+
+    .cards p{
+        transition: 0.5s;
+        transition-delay: 0.3s;
+        text-align: center;
+        position: relative;
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 500px ) {
+    #gridcards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header input{
+        position: fixed;
+        visibility: hidden;
+    }
+
+    #content h1{
+        font-size: 30px;
+    }
+
+    #content h2{
+        font-size: 20px;
+    }
+
+    #bottombar div{
+        width: 90%;
+    }
+}
