@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <title>Spotify</title>
 </head>
+
 <body>
     <div id="sidebar">
         <nav>
@@ -17,11 +20,16 @@
             <i class="fa-solid fa-bars" id="logo-menu"></i>
             <main>
                 <ul id="sidebar-principal">
-                    <li><i class="fa-solid fa-house"></i><p>Inicio</p></li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i><p>Buscar</p></li>
+                    <li><i class="fa-solid fa-house"></i>
+                        <p>Inicio</p>
+                    </li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i>
+                        <p>Buscar</p>
+                    </li>
                 </ul>
             </main>
-            <p id="library"><i class="fa-solid fa-book"></i>Sua Biblioteca<i class="fa-solid fa-plus" id="plus-icon"></i></p>
+            <p id="library"><i class="fa-solid fa-book"></i>Sua Biblioteca<i class="fa-solid fa-plus"
+                    id="plus-icon"></i></p>
             <div>
                 <h1>Crie sua primeira playlist</h1>
                 <p>É facil, vamos te ajudar</p>
@@ -43,7 +51,7 @@
                 <img src="./assets/icons/small-left.png" alt="">
                 <img src="./assets/icons/small-right.png" alt="">
             </div>
-            <input type="text" name="Search" id="" placeholder="Pesquise suas músicas favoritas">
+            <input type="text" name="Search" id="search-input" placeholder="Pesquise suas músicas favoritas">
             <div id="headerbuttons">
                 <button>Inscreva-se</button>
                 <button id="entrar-button">Entrar</button>
@@ -57,21 +65,70 @@
                 <h2>Navegue por suas playlists</h2>
             </div>
             <div id="gridcards">
-                <div class="cards"><img src="./assets/playlist/1.jpeg" alt=""><p>Boas Festas</p></div>
-                <div class="cards"><img src="./assets/playlist/2.png" alt=""><p>Feitos para Você</p></div>
-                <div class="cards"><img src="./assets/playlist/3.jpeg" alt=""><p>Lançamentos</p></div>
-                <div class="cards"><img src="./assets/playlist/4.jpeg" alt=""><p>Creators</p></div>
-                <div class="cards"><img src="./assets/playlist/5.jpeg" alt=""><p>Para Treinar</p></div>
-                <div class="cards"><img src="./assets/playlist/6.jpeg" alt=""><p>podcasts</p></div>
-                <div class="cards"><img src="./assets/playlist/7.jpeg" alt=""><p>Sertanejo</p></div>
-                <div class="cards"><img src="./assets/playlist/8.jpeg" alt=""><p>Samba e Pagode</p></div>
-                <div class="cards"><img src="./assets/playlist/9.jpeg" alt=""><p>FunkHits</p></div>
-                <div class="cards"><img src="./assets/playlist/10.jpeg" alt=""><p>MPB</p></div>
-                <div class="cards"><img src="./assets/playlist/11.jpeg" alt=""><p>OnlyRock</p></div>
-                <div class="cards"><img src="./assets/playlist/12.jpeg" alt=""><p>Rap</p></div>
-                <div class="cards"><img src="./assets/playlist/13.jpeg" alt=""><p>Indie</p></div>
-                <div class="cards"><img src="./assets/playlist/14.jpeg" alt=""><p>Relax</p></div>
-                <div class="cards"><img src="./assets/playlist/15.jpeg" alt=""><p>Música Latina</p></div>
+                <div class="cards"><img src="./assets/playlist/1.jpeg" alt="">
+                    <p>Boas Festas</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/2.png" alt="">
+                    <p>Feitos para Você</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/3.jpeg" alt="">
+                    <p>Lançamentos</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/4.jpeg" alt="">
+                    <p>Creators</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/5.jpeg" alt="">
+                    <p>Para Treinar</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/6.jpeg" alt="">
+                    <p>podcasts</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/7.jpeg" alt="">
+                    <p>Sertanejo</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/8.jpeg" alt="">
+                    <p>Samba e Pagode</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/9.jpeg" alt="">
+                    <p>FunkHits</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/10.jpeg" alt="">
+                    <p>MPB</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/11.jpeg" alt="">
+                    <p>OnlyRock</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/12.jpeg" alt="">
+                    <p>Rap</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/13.jpeg" alt="">
+                    <p>Indie</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/14.jpeg" alt="">
+                    <p>Relax</p>
+                </div>
+                <div class="cards"><img src="./assets/playlist/15.jpeg" alt="">
+                    <p>Música Latina</p>
+                </div>
+            </div>
+
+            <!--Artists Cards-->
+            <div id="result-artist" class="hidden">
+                <div class="grid-container">
+                    <div class="artist-card" id="">
+                        <div class="card-img">
+                            <img id="artist-img" class="artist-img" />
+                            <div class="play">
+                                <span class="fa fa-solid fa-play"></span>
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <a title="Foo Fighters" class="vst" href=""></a>
+                            <span class="artist-name" id="artist-name"></span>
+                            <span class="artist-categorie">Artista</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="bottombar">
@@ -85,11 +142,13 @@
 
     <footer>
         <div>
-            <h1>Teste o premim de graça</h1>
+            <h1>Teste o premium de graça</h1>
             <p>Inscreva-se para curtir ilimitada e podcasts só com alguns anúncios não precisa de cartão de crédito</p>
         </div>
         <button>Inscreva-se Grátis</button>
     </footer>
+    <script src="https://kit.fontawesome.com/040769d9b0.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/040769d9b0.js" crossorigin="anonymous"></script>
+
 </html>
